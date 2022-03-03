@@ -1,49 +1,11 @@
+<!DOCTYPE html>
 <html>
-    <title>JS performance</title>
-    <header>
-        <script>
-            console.log("Initialising arrays")
-            const array1 = [];
-            const array2 = [];
-            const s = { val: 1 };
-            for (let i = 0; i < 10_000_000; i++) {
-                array1.push(s);
-                array2.push(s);
-            }
-            
-            array1.push({ val: 0 }, { val: 1 }, { val: 2 }, { val: 3 });
-            
-            array2.push({ val: 0, a: 0 }, { val: 1, b: 0 }, { val: 2, c: 0 }, { val: 3, d: 0 });
-            
-            console.log("Starting summing")
-
-            for (let i = 0; i <= 5; i++) {
-                timeSum(array1, 'array 1')
-            }
-            
-            for (let i = 0; i <= 5; i++) {
-                timeSum(array2, 'array 2')
-            }
-
-            timeSum(array1, 'array 1')
-            
-            function timeSum(arr, arrName) {
-                const start = Date.now();
-                sum(arr)
-                console.log(`${arrName} - millisseconds elapsed = ${Date.now() - start}`);
-            }
-            
-            function sum(arr) {
-                let acc = 0;
-                for (let i = 0; i < arr.length; i++) {
-                    acc += arr[i].val;
-                }
-                return acc;
-            }    
-            </script>
-    </header>
-
-    <body>
-        <div id="demo">"Hello π-votion!"</div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World - AssemblyScript</title>
+    <link rel="preload" href="./main.js" as="script" />
+  </head>
+  <body>
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>
