@@ -14,3 +14,10 @@ appelmoes and appelmoes-log contain some minimal examples of using assembly scri
 `npm install --save @assemblyscript/loader`
 
 `asc appelmoes.ts -b appelmoes.wasm -t appelmoes.wat`
+
+### Greeting (string concatination)
+compile the greeting.ts with --exportRuntime
+    because:
+    function __newString(str: string): number
+    Allocates a new string in the module's memory and returns a pointer to it. Requires --exportRuntime for access to __new.
+
