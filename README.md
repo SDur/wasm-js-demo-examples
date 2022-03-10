@@ -11,8 +11,6 @@ appelmoes and appelmoes-log contain some minimal examples of using assembly scri
 
 `npm install -g assemblyscript`
 
-`npm install --save @assemblyscript/loader`
-
 `asc appelmoes.ts -b appelmoes.wasm -t appelmoes.wat`
 
 ### Greeting (string concatination)
