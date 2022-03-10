@@ -7,8 +7,7 @@ In the unperformant/index.html is a small js script which shows why js performan
 ## Minimal AssemblyScript examples
 appelmoes and appelmoes-log contain some minimal examples of using assembly script.
 
-## Improve perf with wasm
-Let's rewrite the script in AssemblyScript and compare the results
+## Compile assemblyscript
 
 `npm install -g assemblyscript`
 
